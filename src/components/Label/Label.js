@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import percentUtils from ''
+
 /** Label with required field display, htmlFor and block styling */
 function Label({htmlFor, label, required}) {
     return (

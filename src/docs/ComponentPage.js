@@ -5,12 +5,11 @@ import Props from './Props';
 
 const ComponentPage = ({component}) => {
   const {name, description, props, examples} = component;
-
+debugger;
   return (
     <div className="componentpage">
       <h2>{name}</h2>
       <p>{description}</p>
-
       <h3>Example{examples.length > 1 && "s"}</h3>
       {
         examples.length > 0 ?
