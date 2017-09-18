@@ -26,7 +26,7 @@ FullNameInput.propTypes = {
   htmlId: PropTypes.string.isRequired,
 
   /** Function to call onChange */
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 
 };
 
