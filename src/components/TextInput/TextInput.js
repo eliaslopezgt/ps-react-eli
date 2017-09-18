@@ -33,7 +33,7 @@ TextInput.propTypes = {
   label: PropTypes.string.isRequired,
 
   /** Input name. Recommend setting this to match object's property so a single change handler can be used. */
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
 
   /** Regex Validation Pattern */
   pattern: PropTypes.string.isRequired,
@@ -45,7 +45,7 @@ TextInput.propTypes = {
   title: PropTypes.string.isRequired,
 
   /** Input type */
-  type: PropTypes.oneOf(['text', 'number', 'password']),
+  type: PropTypes.oneOf(['text', 'number', 'password', 'tel']),
 
   /** Function to call onChange */
   onChange: PropTypes.func.isRequired,
