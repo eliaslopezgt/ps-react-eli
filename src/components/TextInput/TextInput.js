@@ -3,20 +3,21 @@ import PropTypes from 'prop-types';
 import Label from '../Label';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, regex pattern and required. */
-function TextInput({htmlId, name, label, type = "text", onChange, placeholder, value, children, pattern, ...props}) {
+function TextInput({htmlId, cssClass, label, name, pattern, placeholder, title, type = "text", onChange, value, children, ...props}) {
   return (
-    <div>
-      <Label htmlFor={htmlId} label={label} />
+    <div class={cssClass}>
       <input
         id={htmlId}
-        type={type}
         name={name}
+        pattern={pattern}
         placeholder={placeholder}
+        title={title}
+        type={type}
         value={value}
         onChange={onChange}
-        pattern={pattern}
         {...props}/>
         {children}
+        <Label htmlFor={htmlId} label={label} />
     </div>
   );
 };
@@ -25,11 +26,23 @@ TextInput.propTypes = {
   /** Unique HTML ID. Used for tying label to HTML input. Handy hook for automated testing. */
   htmlId: PropTypes.string.isRequired,
 
-  /** Input name. Recommend setting this to match object's property so a single change handler can be used. */
-  name: PropTypes.string.isRequired,
+  /** CSS class for the outer DIV wrapper */
+  cssClass: PropTypes.string,
 
   /** Input label */
   label: PropTypes.string.isRequired,
+
+  /** Input name. Recommend setting this to match object's property so a single change handler can be used. */
+  name: PropTypes.string.isRequired,
+
+  /** Regex Validation Pattern */
+  pattern: PropTypes.string,
+
+  /** Placeholder to display when empty */
+  placeholder: PropTypes.string,
+
+  /** Title Tool Tip for the input */
+  title: PropTypes.string,
 
   /** Input type */
   type: PropTypes.oneOf(['text', 'number', 'password']),
@@ -37,17 +50,12 @@ TextInput.propTypes = {
   /** Function to call onChange */
   onChange: PropTypes.func.isRequired,
 
-  /** Placeholder to display when empty */
-  placeholder: PropTypes.string,
-
   /** Value */
   value: PropTypes.any,
 
   /** Child component to display next to the input */
   children: PropTypes.node,
 
-  /** Regex Validation Pattern */
-  pattern: PropTypes.string
 };
 
 export default TextInput;
