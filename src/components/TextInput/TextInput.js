@@ -48,7 +48,7 @@ TextInput.propTypes = {
   type: PropTypes.oneOf(['text', 'number', 'password', 'tel']),
 
   /** Function to call onChange */
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 
   /** Value */
   value: PropTypes.any,
