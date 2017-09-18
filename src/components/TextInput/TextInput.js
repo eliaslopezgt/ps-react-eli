@@ -5,7 +5,7 @@ import Label from '../Label';
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, regex pattern and required. */
 function TextInput({htmlId, cssClass, label, name, pattern, placeholder, title, type = "text", onChange, value, children, ...props}) {
   return (
-    <div class={cssClass}>
+    <div className={cssClass}>
       <input
         id={htmlId}
         name={name}
@@ -27,7 +27,7 @@ TextInput.propTypes = {
   htmlId: PropTypes.string.isRequired,
 
   /** CSS class for the outer DIV wrapper */
-  cssClass: PropTypes.string,
+  cssClass: PropTypes.string.isRequired,
 
   /** Input label */
   label: PropTypes.string.isRequired,
@@ -36,13 +36,13 @@ TextInput.propTypes = {
   name: PropTypes.string.isRequired,
 
   /** Regex Validation Pattern */
-  pattern: PropTypes.string,
+  pattern: PropTypes.string.isRequired,
 
   /** Placeholder to display when empty */
   placeholder: PropTypes.string,
 
   /** Title Tool Tip for the input */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 
   /** Input type */
   type: PropTypes.oneOf(['text', 'number', 'password']),

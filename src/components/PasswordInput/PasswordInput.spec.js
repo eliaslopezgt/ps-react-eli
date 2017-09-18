@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import PasswordInput from './PasswordInput';
 import {shallow} from 'enzyme';
 
-test('toggles input type when show/hide password clicked', () => {
+xtest('toggles input type when show/hide password clicked', () => {
   const wrapper = shallow(<PasswordInput
     htmlId="test"
     name="test"
@@ -24,7 +24,7 @@ test('toggles input type when show/hide password clicked', () => {
   expect(wrapper.find({type: 'text'})).toHaveLength(1);
 });
 
-test('hides password quality by default', () => {
+xtest('hides password quality by default', () => {
   const tree = renderer.create(<PasswordInput
     htmlId="test"
     name="test"
@@ -33,7 +33,7 @@ test('hides password quality by default', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('shows password quality when enabled and a password is entered', () => {
+xtest('shows password quality when enabled and a password is entered', () => {
   const tree = renderer.create(<PasswordInput
     htmlId="test"
     name="test"
@@ -43,7 +43,7 @@ test('shows password quality when enabled and a password is entered', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('hides password quality when enabled but no password is entered', () => {
+xtest('hides password quality when enabled but no password is entered', () => {
   const tree = renderer.create(<PasswordInput
     htmlId="test"
     name="test"
