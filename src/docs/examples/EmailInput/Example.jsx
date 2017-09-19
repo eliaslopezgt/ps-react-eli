@@ -12,7 +12,7 @@ class ExampleAllFeatures extends React.Component {
           onChange={ event => console.log(event.target.value)}
           {...this.props} />
       </div>
-    )
+    );
   }
 }
 

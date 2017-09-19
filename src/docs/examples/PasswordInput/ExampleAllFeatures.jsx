@@ -30,7 +30,7 @@ class ExampleAllFeatures extends React.Component {
           quality={this.getQuality()}
           {...this.props} />
       </div>
-    )
+    );
   }
 }
 

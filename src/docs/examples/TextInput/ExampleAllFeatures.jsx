@@ -8,18 +8,18 @@ class ExampleAllFeatures extends React.Component {
     return (
       <div>
         <TextInput
-        htmlId="test"
-        cssClass="testClass"
-        label="testLabel"
-        pattern="testPattern"
-        title="testTitle"
-        name="test"
-        value=""
-        onChange={() => {}}
-        required
-        {...this.props} />
+          htmlId="test"
+          cssClass="testClass"
+          label="testLabel"
+          pattern="testPattern"
+          title="testTitle"
+          name="test"
+          value=""
+          onChange={() => {}}
+          required
+          {...this.props} />
       </div>
-    )
+    );
   }
 }
 

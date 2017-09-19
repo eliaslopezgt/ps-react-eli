@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 /** Hidden Input with name and value */
 function HiddenInput({name, value, ...props}) {
   return (
-      <input
-        name={name}
-        value={value}
-        type="hidden"
-        {...props}/>
+    <input
+      name={name}
+      value={value}
+      type="hidden"
+      {...props}/>
   );
 };
 

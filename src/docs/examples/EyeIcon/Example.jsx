@@ -3,5 +3,7 @@ import EyeIcon from 'ps-react/EyeIcon';
 
 /** EyeIcon Example for Elias*/
 export default function Example() {
-    return <EyeIcon/>
-}
+  return (
+    <EyeIcon/>
+  );
+};

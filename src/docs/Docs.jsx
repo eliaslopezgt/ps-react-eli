@@ -14,8 +14,8 @@ export default class Docs extends React.Component {
 
   componentDidMount() {
     window.addEventListener('hashchange', () => {
-      this.setState({route: window.location.hash.substr(1)})
-    })
+      this.setState({route: window.location.hash.substr(1)});
+    });
   }
 
   render() {
@@ -27,6 +27,6 @@ export default class Docs extends React.Component {
         <Navigation components={componentData.map(component => component.name)} />
         <ComponentPage component={component} />
       </div>
-    )
+    );
   }
 }

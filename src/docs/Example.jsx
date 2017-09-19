@@ -28,19 +28,19 @@ class Example extends React.Component {
 
         <p>
           <a href="" onClick={this.toggleCode}>
-            {showCode ? "Hide" : "Show"} Code
+            {showCode ? 'Hide' : 'Show'} Code
           </a>
         </p>
 
         {showCode && <CodeExample>{code}</CodeExample>}
       </div>
-    )
+    );
   }
 }
 
 Example.propTypes = {
   example: PropTypes.object.isRequired,
   componentName: PropTypes.string.isRequired
-}
+};
 
 export default Example;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Label from '../Label';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, regex pattern and required. */
-function TextInput({htmlId, cssClass, label, name, pattern, placeholder, title, type = "text", onChange, value, children, ...props}) {
+function TextInput({htmlId, cssClass, label, name, pattern, placeholder, title, type = 'text', onChange, value, children, ...props}) {
   return (
     <div className={cssClass}>
       <input
@@ -16,8 +16,8 @@ function TextInput({htmlId, cssClass, label, name, pattern, placeholder, title, 
         value={value}
         onChange={onChange}
         {...props}/>
-        {children}
-        <Label htmlFor={htmlId} label={label} />
+      {children}
+      <Label htmlFor={htmlId} label={label} />
     </div>
   );
 };

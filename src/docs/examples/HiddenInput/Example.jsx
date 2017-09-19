@@ -7,10 +7,10 @@ class ExampleAllFeatures extends React.Component {
   render() {
     return (
       <HiddenInput
-      name="testname"
-      value="testvalue"
-      {...this.props} />
-    )
+        name="testname"
+        value="testvalue"
+        {...this.props} />
+    );
   }
 }
 

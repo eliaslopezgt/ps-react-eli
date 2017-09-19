@@ -10,7 +10,7 @@ class PasswordInput extends React.Component {
     super(props);
     this.state = {
       showPassword: false
-    }
+    };
   }
 
   toggleShowPassword = event => {
