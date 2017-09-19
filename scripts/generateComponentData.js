@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 var fs = require('fs');
 var path = require('path');
 var chalk = require('chalk');
@@ -13,7 +14,7 @@ var paths = {
 const enableWatchMode = process.argv.slice(2) == '--watch';
 if (enableWatchMode) {
   // Regenerate component metadata when components or examples change.
-  chokidar.watch([paths.examples, paths.components]).on('change', function(event, path) {
+  chokidar.watch([paths.examples, paths.components]).on('change', function() {
     generate(paths);
   });
 } else {
@@ -30,7 +31,7 @@ function generate(paths) {
       errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
     }
   });
-  writeFile(paths.output, "module.exports = /* eslint-disable */ " + JSON.stringify(errors.length ? errors : componentData));
+  writeFile(paths.output, 'module.exports = /* eslint-disable */ ' + JSON.stringify(errors.length ? errors : componentData));
 }
 
 function getComponentData(paths, componentName) {
@@ -42,7 +43,7 @@ function getComponentData(paths, componentName) {
     props: info.props,
     code: content,
     examples: getExampleData(paths.examples, componentName)
-  }
+  };
 }
 
 function getExampleData(examplesPath, componentName) {
@@ -85,7 +86,7 @@ function getFiles(filepath) {
 
 function writeFile(filepath, content) {
   fs.writeFile(filepath, content, function (err) {
-    err ? console.log(chalk.red(err)) : console.log(chalk.green("Component data saved."));
+    err ? console.log(chalk.red(err)) : console.log(chalk.green('Component data saved.'));
   });
 }
 
