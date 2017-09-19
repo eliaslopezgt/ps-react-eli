@@ -20,7 +20,7 @@ function TextInput({htmlId, cssClass, label, name, pattern, placeholder, title, 
       <Label htmlFor={htmlId} label={label} />
     </div>
   );
-};
+}
 
 TextInput.propTypes = {
   /** Unique HTML ID. Used for tying label to HTML input. Handy hook for automated testing. */

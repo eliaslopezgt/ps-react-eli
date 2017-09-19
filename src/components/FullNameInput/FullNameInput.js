@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextInput from '../TextInput';
 
-/** PhoneInput with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-function PhoneInput({htmlId, onChange, ...props}) {
+/** Full Name input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
+function FullNameInput({htmlId, onChange, ...props}) {
   return (
     <TextInput
       htmlId={htmlId}
       cssClass="form-input-wrapper"
-      name="Phone"
-      label="Phone Number"
-      pattern="(1|001)?[-. ]?\(?([2-9][0-9]{2})\)?[-. ]?([2-9](?!11)[0-9]{2})[-. ]?([0-9]{4})"
+      name="fullname"
+      label="Name (First &amp; Last)"
+      pattern="((\b[a-zA-Z][a-zA-Z.,'-]{1,})\s{0,}){1,}$"
       placeholder=""
       required
-      title="Example: 555-555-5555"
-      type="tel"
+      title="Example: Firstname Lastname"
+      type="text"
       onChange={onChange}
       {...props}
     />
   );
-};
+}
 
-PhoneInput.propTypes = {
+FullNameInput.propTypes = {
   /** Unique HTML ID. Used for tying label to HTML input. Handy hook for automated testing. */
   htmlId: PropTypes.string.isRequired,
 
@@ -30,4 +30,4 @@ PhoneInput.propTypes = {
 
 };
 
-export default PhoneInput;
+export default FullNameInput;

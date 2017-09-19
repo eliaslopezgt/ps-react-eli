@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import React from 'react';
-import EmailInput from 'ps-react/EmailInput';
+import FullNameInput from 'ps-react/FullNameInput';
 
 /** All features enabled */
 class ExampleAllFeatures extends React.Component {
@@ -7,8 +8,8 @@ class ExampleAllFeatures extends React.Component {
   render() {
     return (
       <div>
-        <EmailInput
-          htmlId="leadFormEmail"
+        <FullNameInput
+          htmlId="leadFormFullname"
           onChange={ event => console.log(event.target.value)}
           {...this.props} />
       </div>

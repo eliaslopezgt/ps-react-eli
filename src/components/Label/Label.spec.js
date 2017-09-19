@@ -6,7 +6,7 @@ test('Display label with default content', () => {
   const wrapper = shallow(<Label
     htmlFor="testId"
     label="test"
-    />
+  />
   );
 
   /** Expect a label with html for and content */

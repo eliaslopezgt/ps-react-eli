@@ -7,7 +7,7 @@ test('Display button with class, label and icon class', () => {
     className="testbuttonclass"
     label="testlabel"
     iconClassName="testiconclass"
-    />
+  />
   );
 
   // Should have a container with the testClass specified type submit

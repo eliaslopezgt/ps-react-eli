@@ -10,7 +10,7 @@ xtest('toggles input type when show/hide password clicked', () => {
     value=""
     onChange={() => {}}
     showVisibilityToggle
-    />
+  />
   );
 
   // Password input should have a type of password initially

@@ -8,7 +8,7 @@ function Label({htmlFor, label}) {
       {label}
     </label>
   );
-};
+}
 
 Label.propTypes = {
   /** HTML ID for associated input */

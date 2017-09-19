@@ -6,7 +6,7 @@ test('Renders a hidden input with name and value', () => {
   const wrapper = shallow(<HiddenInput
     name="testname"
     value="testvalue"
-    />
+  />
   );
 
   // Should be a hidden input with name and value set

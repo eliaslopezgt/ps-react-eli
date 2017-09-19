@@ -10,7 +10,7 @@ function HiddenInput({name, value, ...props}) {
       type="hidden"
       {...props}/>
   );
-};
+}
 
 HiddenInput.propTypes = {
 

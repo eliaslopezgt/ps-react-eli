@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextInput from '../TextInput';
 
-/** Full Name input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-function FullNameInput({htmlId, onChange, ...props}) {
+/** Emailinput with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
+function EmailInput({htmlId, onChange, ...props}) {
   return (
     <TextInput
       htmlId={htmlId}
       cssClass="form-input-wrapper"
-      name="fullname"
-      label="Name (First &amp; Last)"
-      pattern="((\b[a-zA-Z][a-zA-Z.,'-]{1,})\s{0,}){1,}$"
+      name="EmailAddress"
+      label="Email"
+      pattern="[\w.\-_]{2,}@[A-Z\w]{2,}\.[a-zA-Z]{2,8}"
       placeholder=""
       required
-      title="Example: Firstname Lastname"
+      title="Example: email@domain.com"
       type="text"
       onChange={onChange}
       {...props}
     />
   );
-};
+}
 
-FullNameInput.propTypes = {
+EmailInput.propTypes = {
   /** Unique HTML ID. Used for tying label to HTML input. Handy hook for automated testing. */
   htmlId: PropTypes.string.isRequired,
 
@@ -30,4 +30,4 @@ FullNameInput.propTypes = {
 
 };
 
-export default FullNameInput;
+export default EmailInput;

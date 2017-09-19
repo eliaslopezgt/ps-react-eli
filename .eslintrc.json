@@ -6,7 +6,7 @@
         "node": true,
         "jest": true
     },
-    "extends": ["plugin:react/recommended"],
+    "extends": ["plugin:react/recommended", "eslint:recommended"],
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",

@@ -6,4 +6,4 @@ export default function Example() {
   return (
     <EyeIcon/>
   );
-};
+}

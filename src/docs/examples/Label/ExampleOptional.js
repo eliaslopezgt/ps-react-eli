@@ -6,4 +6,4 @@ export default function ExampleStandard() {
   return (
     <Label htmlFor="test" label="test" />
   );
-};
+}

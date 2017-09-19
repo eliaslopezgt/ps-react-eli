@@ -1,6 +1,6 @@
 import React from 'react';
 import TextInput from './TextInput';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 
 test('Renders a container div with input and label', () => {
   const wrapper = mount(<TextInput
@@ -13,7 +13,7 @@ test('Renders a container div with input and label', () => {
     value=""
     onChange={() => {}}
     required
-    />
+  />
   );
 
   // Should have a container with the testClass specified

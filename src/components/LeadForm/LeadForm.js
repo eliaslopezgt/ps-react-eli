@@ -7,7 +7,7 @@ import SubmitButton from 'ps-react/SubmitButton';
 import HiddenInput from 'ps-react/HiddenInput';
 
 /** LeadForm */
-function LeadForm({action, className, htmlId, method, name, fullNameOnChange, emailOnChange, phoneOnChange, ...props}) {
+function LeadForm({action, className, htmlId, method, name, fullNameOnChange, emailOnChange, phoneOnChange}) {
   return (
     <form action={action} className={className} id={htmlId} method={method} name={name}>
       <FullNameInput htmlId="leadFormFullname" onChange={fullNameOnChange}/>
