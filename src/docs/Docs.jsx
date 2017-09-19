@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import Navigation from './Navigation';
 import ComponentPage from './ComponentPage';
